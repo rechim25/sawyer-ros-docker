@@ -1,0 +1,16 @@
+version: '3'
+services:
+  sawyer_dev:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    network_mode: "host"
+    volumes:
+      # - ./ros_ws:/root/ros_ws
+      - /tmp/.X11-unix:/tmp/.X11-unix  # for GUI tools like RViz
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1             # prevent certain RViz crashes
+    privileged: true                   # needed if you pass USB sticks or realtime kernels
+    tty: true
+    command: "bash"
