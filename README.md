@@ -40,7 +40,7 @@ In the FSM, we will set the robot to use a static IP and ROS_IP addressing:
 Now, we need to reboot the robot in <b>SDK mode</b>:
 - In the FSM main page, select `Next Boot in` to `SDK`.
 
-<b>Note: we always need to boot the robot in SDK mode if we intend to control it with ROS<b>
+<b>Note: we always need to boot the robot in SDK mode if we intend to control it with ROS</b>
 
 Additional information can be found in [Networking](https://web.archive.org/web/20180809121510/http://sdk.rethinkrobotics.com/intera/Networking). We now completed the setup with a router in between your workstation (e.g., laptop) and robot and set the robot to use ROS_IP addressing instead of ROS_HOSTNAME.local.
 
